@@ -35,7 +35,7 @@ provider:
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
     ARTICLES_TABLE_NAME: ${self:custom.ARTICLES_TABLE_NAME}
-    IS_OFFLINE: true
+    #IS_OFFLINE: true
   iamRoleStatements:
     - Effect: Allow
       Action:

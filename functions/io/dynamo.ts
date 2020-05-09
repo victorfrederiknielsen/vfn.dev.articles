@@ -1,5 +1,9 @@
-import { DynamoDB } from 'aws-sdk'
-import { PutItemInput, ScanInput, GetItemInput } from 'aws-sdk/clients/dynamodb'
+import {
+  PutItemInput,
+  ScanInput,
+  GetItemInput,
+  DocumentClient,
+} from 'aws-sdk/clients/dynamodb'
 
 const options = process.env.IS_OFFLINE
   ? {
@@ -8,7 +12,7 @@ const options = process.env.IS_OFFLINE
     }
   : {}
 
-const db = new DynamoDB.DocumentClient(options)
+const db = new DocumentClient(options)
 
 export default {
   scan: async (params: ScanInput) => {

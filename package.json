@@ -15,6 +15,7 @@
     "@types/node": "^10.12.18",
     "aws-sdk": "^2.670.0",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "jest": "^26.0.1",
     "serverless-dynamodb-local": "^0.2.39",
     "serverless-offline": "^6.1.5",
     "serverless-webpack": "^5.2.0",
