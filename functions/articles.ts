@@ -34,7 +34,7 @@ export const get: APIGatewayProxyHandler = async (event, _context) => {
       TableName: process.env.ARTICLES_TABLE_NAME,
       Key: {
         ID: id,
-      },
+      } as any,
     })
     return Item ? response._200(Item) : response._404()
   } catch (error) {

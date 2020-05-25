@@ -1,5 +1,7 @@
+org: vfn2002
+app: vfn-dev-articles
 service:
-  name: vfn-dev-articles-ts
+  name: vfn-dev-articles
 
 custom:
   webpack:
@@ -52,6 +54,7 @@ functions:
       - http:
           method: get
           path: list
+          cors: true
   putArticle:
     handler: ./functions/articles.put
     events:
@@ -64,6 +67,7 @@ functions:
       - http:
           method: get
           path: get/{id}
+          cors: true
           request:
             parameters:
               paths:
